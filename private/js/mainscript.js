@@ -98,7 +98,7 @@ function tutorial(){
     //Crear Michael
     console.log("Summon Success!");
     if(audioactive){
-        var audio = new Audio('assets/ding.mp3');
+        var audio = new Audio('public/assets/ding.mp3');
         audio.play();
     }
     var clientElement = createMichael();
@@ -145,7 +145,7 @@ function summonClient() {
         if (Math.random() > 0.5) {
             console.log("Summon Success!");
             if(audioactive){
-                var audio = new Audio('assets/ding.mp3');
+                var audio = new Audio('public/assets/ding.mp3');
                 audio.play();
             }
             var clientElement = createClient();
@@ -188,7 +188,7 @@ function createClient() {
         randomint = Math.floor(Math.random() * 20);
         console.log(randomint);
     }
-    clientElement.style.backgroundImage='url("assets/town/'+randomint+'.png")';
+    clientElement.style.backgroundImage='url("public/assets/town/'+randomint+'.png")';
     clientObj = townsfolk[randomint];
     lastClient = randomint;
     return clientElement;
@@ -210,7 +210,7 @@ function createMichael() {
     //attributes
     clientElement.setAttribute("id", "currentClient");
     clientElement.setAttribute("onclick", 'michaelActions()');
-    clientElement.style.backgroundImage='url("assets/town/'+19+'.png")';
+    clientElement.style.backgroundImage='url("public/assets/town/'+19+'.png")';
     clientObj = townsfolk[19];
     lastClient = 19;
     return clientElement;
@@ -379,7 +379,7 @@ function openInvFromClient() {
         c.innerHTML = currentInv[item.id];
         
         var squareimg = document.createElement('img');
-        squareimg.setAttribute('src', 'assets/items/' + item.id + '.png');
+        squareimg.setAttribute('src', 'public/assets/items/' + item.id + '.png');
         
         square.appendChild(c);
         square.appendChild(squareimg);
@@ -644,7 +644,7 @@ function openInvFromBackshop() {
         c.innerHTML = currentInv[item.id];
         square.appendChild(c);
         var squareimg = document.createElement('img');
-        squareimg.setAttribute('src', 'assets/items/' + item.id + '.png');
+        squareimg.setAttribute('src', 'public/assets/items/' + item.id + '.png');
         squareimg.setAttribute('onclick', "selectItemFromInvBackdrop(\""+item.id+"\")");
         square.appendChild(squareimg);
         screen.appendChild(square);
@@ -738,7 +738,7 @@ function openMagicPot() {
         c.innerHTML = currentInv[item.id];
         square.appendChild(c);
         var squareimg = document.createElement('img');
-        squareimg.setAttribute('src', 'assets/items/' + item.id + '.png');
+        squareimg.setAttribute('src', 'public/assets/items/' + item.id + '.png');
         square.appendChild(squareimg);
         square.setAttribute('quantity', currentInv[item.id]); // Establecer la cantidad inicial
         
@@ -946,7 +946,7 @@ function loadRecetas() {
 
         //img
         var squareimg = document.createElement('img');
-        squareimg.setAttribute('src', 'assets/items/'+itemid+'.png');
+        squareimg.setAttribute('src', 'public/assets/items/'+itemid+'.png');
         recipesquare.appendChild(squareimg);
 
         //texdiv
