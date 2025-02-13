@@ -2293,12 +2293,12 @@ function cargarDesdeLocalStorage() {
   var storedCurrentInv = localStorage.getItem("currentInv");
   var storedProgress = localStorage.getItem("progress");
   console.log("Cargando...");
-  if(!storedCurrentInv=="dW5kZWZpbmVk"){
+  if(storedCurrentInv!="dW5kZWZpbmVk"){
     currentInv = decodeBase64(storedCurrentInv);
     console.log(currentInv);
   }
 
-  if (!storedProgress=="dW5kZWZpbmVk") {
+  if (storedProgress!="dW5kZWZpbmVk") {
     progress = decodeBase64(storedProgress);
     console.log(progress);
   }
