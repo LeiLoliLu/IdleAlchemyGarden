@@ -19,11 +19,11 @@ var interacted = false;
 const cooldowns = {
   i1: 0.1, //0.1
   i2: 5, //5
-  i3: 5, //15
-  i4a: 5, //30
-  i4b: 5, //30
-  i5: 5, //45
-  i6: 5, //60
+  i3: 15, //15
+  i4a: 30, //30
+  i4b: 30, //30
+  i5: 45, //45
+  i6: 60, //60
 };
 var guardadoAutomatico;
 
@@ -1033,21 +1033,21 @@ var upgradesData = [
       imgroute: "public/assets/garden//i3.png",
       title: "Raíces de Piedra",
       text: "Pequeñas raíces conocidas por sus propiedades de endurecimiento. <br> Comprar este ingrediente lo añade al jardín. Tarda 15 segundos en crecer una vez se recoge.",
-      price: 75,
+      price: 150,
     }, //150
     {
       id: "hasPolen",
       imgroute: "public/assets/garden//i4.png",
       title: "Flores Vulcano",
       text: "Una flor que produce polen de dos tipos, relacionado de forma común con la temperatura. <br> Comprar este ingrediente lo añade al jardín. Tarda 30 segundos en crecer una vez se recoge. Se añade un interruptor para cosechar un polen u otro.",
-      price: 150,
+      price: 275,
     }, //275
     {
       id: "hasAurora",
       imgroute: "public/assets/garden//i56.png",
       title: "Frutos de Aurora",
       text: "Un fruto escaso por su difícil y costosa germinación. Podrás cosechar sus hojas o el fruto entero. <br> Comprar este ingrediente lo añade al jardín. Las hojas tardan 45 segundos en crecer una vez se recogen, y si se recoge el fruto entero, 60 segundos. Se añade un interruptor para cosechar un las hojas o los frutos enteros.",
-      price: 275,
+      price: 400,
     }, //400
   ];
   
